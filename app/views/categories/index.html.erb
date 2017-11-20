@@ -27,5 +27,11 @@
 </table>
 
 <br>
+<!--ability to create an new item-->
+<!--need to have here if user is Admin-->
+<% if user_signed_in? %>
+<p><%= link_to 'New Category', new_category_path %></p>
+<%end%>
 
-<%= link_to 'New Category', new_category_path %>
+
+
