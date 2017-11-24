@@ -7,6 +7,8 @@ end
 #12 factor for Heroku
 gem 'rails_12factor', group: :production
 
+#Heroku will need my most recent rails version which is
+ruby '2.4.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.1.2'
@@ -34,9 +36,15 @@ gem 'jbuilder', '2.7.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#old sqlite3
 group :development, :test do
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '1.3.13'
+ gem 'sqlite3', '1.3.13'
+ #Use sqlite3 as the database for Active Record
+
+#used for develpment and tstiong
+#gem 'sqlite3', group: [:development, :test]  
+  
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '9.0.6', platforms: :mri
   # Adds support for Capybara system testing and selenium driver
