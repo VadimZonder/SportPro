@@ -73,7 +73,12 @@ class CartController < ApplicationController
     
   end
     
-    redirect_to '/orderConfirmed/'
+   @orders = Order.last
+   
+   @orderitems = Orderitem.where(order_id: Order.last)
+    
+  
+    
     
   end  
 end

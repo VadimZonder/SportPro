@@ -5,14 +5,14 @@ class UserController < ApplicationController
     def admin_login
         session[:login] = 1
         session[:cart] = nil
-        flash[:notice] = "Admin Login sucessfull!!"
+        flash[:notice] = "You are in Admin Mode!"
         redirect_to :controller => :items
     end 
     
     def logout
         session[:login] = nil
         session[:cart] = nil
-        flash[:notice] = "You have been successfully logged out!!"
+        flash[:notice] = "Logout was successful!!"
         redirect_to :controller => :items
     end    
     

@@ -136,3 +136,5 @@
 <% if session[:login]==1%>
 <p><%= link_to 'New Item', new_item_path %></p>
 <%end%>
+
+<%= will_paginate @items %>

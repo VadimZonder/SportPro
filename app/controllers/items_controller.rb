@@ -1,10 +1,17 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
+
+ def search
+   @search_term = params[:q]
+   st = "%#{params[:q]}%"
+   @items = Item.where("title like ?", st)
+  end 
+
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @items = Item.paginate(:page => params[:page], :per_page => 2)
   end
 
   # GET /items/1
