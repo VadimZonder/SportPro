@@ -39,17 +39,13 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
-  #gem 'sqlite3', '1.3.13'
+  gem 'sqlite3', '1.3.13'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '9.0.6', platforms: :mri
   # Adds support for Capybara system testing and selenium driver
   # gem 'capybara', '~> 2.13'
   # gem 'selenium-webdriver'
 end
-
-#used for development and testing
-gem 'sqlite3', group: [:development, :test]
-
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
